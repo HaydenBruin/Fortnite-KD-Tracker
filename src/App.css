@@ -1,28 +1,223 @@
-.App {
-  text-align: center;
+/*** FONTS ***/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400');
+
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
+*/
+
+/*** ROWS ***/
+.row.full { width: 100%; max-width: 100%; }
+.full-width { width: 100%; }  
+.full { width: 100%; }
+.container { width: 1146px; max-width: 100%; }
+
+/*** DEFAULTS ***/
+.wrap { position: relative; }
+img { max-width: 100%; }
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.hide { display: none !important; }
+
+/*** BODY ***/ 
+html, body {
+    min-height: 100vh;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    background: #FFF;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+}
+body.black { background: #333; }
+
+/*** LINKS ***/
+a { color: #BD0017; }
+a:hover { color: #BD0017; }
+a.anchor {
+    display: block;
+    position: relative;
+    top: -280px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+/*** HEADERS ***/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #0e2040;
+}
+h1, .h1 { font-size: 48px; }
+h2, .h2 { font-size: 40px; }
+h3, .h3 { font-size: 36px; }
+h4, .h4 { font-size: 24px; }
+h5, .h5 { font-size: 24px; }
+h6, .h6 { font-size: 18px; }
+    
+/*** SECONDARIES ***/
+.button, button, input[type=submit] {
+    background: #D96FBB;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 15px 40px;
+    display: inline-block;
+    text-align: center;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    margin-top: 30px;
+    font-family: 'Montserrat', sans-serif;
+    border: 0px;
+    position: relative;
+	transition: 0.3s;
+    -webkit-transition: 0.3s;
+}
+.button:hover, button:hover, .button.active, button.active, input[type=submit]:hover, input[type=submit].active {
+    background: #FFF;
+    color: #D96FBB;
+    text-decoration: none;
+    cursor: pointer;
+}
+button.small, .button.small { font-size: 14px; }
+
+/*** PARAGRAPHS ***/
+p {
+    font-size: 16px;
+    color: #9e9e9e;
+    line-height: 30px;
+    font-family: 'Open Sans', sans-serif;
+}
+p.medium { font-size: 20px; }
+p.large { font-size: 24px; }
+p.error {
+    background: red;
+    margin: 0px;
+    padding: 5px 15px;
+    color: #FFF;
+    font-size: 12px;
+    line-height: normal;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+/*** LABELS ***/
+label {
+    color: #888;
+    font-weight: normal;
+    display: block;
+    font-size: 14px;
+}
+span.field-validation-error {
+    font-size: 12px;
+    background: #FF0000;
+    width: 100%;
+    display: block;
+    position: relative;
+    top: -15px;
+    color: #FFF;
+    padding: 10px 15px;
 }
 
-.App-title {
-  font-size: 1.5em;
+/*** INPUT ***/
+[type=color],
+[type=date],
+[type=datetime-local],
+[type=datetime],
+[type=email],
+[type=month],
+[type=number],
+[type=password],
+[type=search],
+[type=tel],
+[type=text],
+[type=time],
+[type=url],
+[type=week],
+textarea {
+    background: #FFF;
+    color: #005087;
+    box-shadow: none;
+    border: 1px solid #eee;
+    padding: 15px;
+    height: 40px;
+    width: 100%;
+    outline: none;
+    margin: 0px 0px 15px 0px;
+    max-width: 100% !important;
+    font-size: 14px;
+}
+input, select {
+    font-size: 14px;
+    font-weight: normal;
+}
+textarea {
+    height: 150px;
+    max-width: 100%;
+    margin-bottom: 10px;
 }
 
-.App-intro {
-  font-size: large;
+/*** CENTER ***/
+.center {
+    display: table-cell;
+    vertical-align: middle;
 }
+.section { overflow: hidden; padding: 100px 0px; }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+/*** HERO ***/
+.section.hero {
+    background-image: linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,.7) 405px),url(/images/bg.jpg) !important;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 250px 0px 300px 0px;
+    margin: 0px;
+	position: relative;
+    text-align: center;
+    height: 100vh;
 }
+.section.hero h1 {
+    color: #FFF;
+    font-size: 32px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+.section.hero h2 {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 60px;
+}
+.section.hero .search .row .column { padding: 0px; }
+.section.hero .search.loading input {
+    background: #FFF url(/images/loading.gif) no-repeat;
+    background-position: center right 15px;
+}
+.section.hero .search input,
+.section.hero .search select,
+.section.hero .search button {
+    width: 100%;
+    margin: 0px;
+    height: 60px;
+    border: 0px;
+    padding: 0px 20px;
+}
+.section.hero .search select { background: #eee; outline: none; }
+.section.hero .search button { background: #6b5acc; padding: 0px; }
+.section.hero .search button:hover {
+    background: #6356af;
+    color: #FFF;
+}
+.section.hero .search .email { border-left: 1px solid #eee; }
