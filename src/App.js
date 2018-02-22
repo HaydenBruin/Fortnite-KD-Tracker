@@ -3,6 +3,19 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
 class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {value: ''};
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleSubmit(event) {
+        alert('Your favorite flavor is: ' + this.state.value);
+        event.preventDefault();
+    }
+
     render() {
         return (
             <div className="App">
@@ -19,11 +32,11 @@ class App extends React.Component {
                                 </div>
                             </div>
                             <div className="col-md-12">
-                                <form action="?">
-                                    <div className="search loading">
+                                <form onSubmit={this.handleSubmit}>
+                                    <div className="search">
                                         <div className="row">
                                             <div className="col-md-7 column">
-                                                <input type="text" name="username" value="" placeholder="Your Epic Games Username..." />
+                                                <input type="text" name="username" value={this.state.value} onChange={this.handleChange} placeholder="Your Epic Games Username..." />
                                             </div>
                                             <div className="col-md-3 column">
                                                 <select name="platform">
@@ -44,9 +57,9 @@ class App extends React.Component {
                 </div>
 
                 <footer>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-12">
                                 <p>Website branded & powered by <a href="https://haydenbruin.com">Bruin Development</a></p>
                             </div>
                         </div>
