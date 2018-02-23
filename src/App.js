@@ -7,8 +7,8 @@ class App extends React.Component {
         super(props);
         this.state = {
             username: '',
-            platform: 'pc',
-            apikey: '41c2a2e1-936f-4a54-85a0-8ebba5f73832'
+            platform: '1',
+            apiurl: 'http://fortnite.bruindev.com'
         };
 
         // HANDLE SUBMIT
@@ -21,22 +21,16 @@ class App extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        var url = "http://fortnite.bruindev.com/api/trackUser.php?platform=" + this.state.platform + "&username=" + this.state.username;
+        var url = this.state.apiurl + "/api/createUser.php?platform=" + this.state.platform + "&username=" + this.state.username;
         fetch(url, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
             },
             }).then(function(response) {
-                //response.status     //=> number 100–599
-                //response.statusText //=> String
-                //response.headers    //=> Headers
-                //response.url        //=> String
-
-                alert(response.text());
+                return response.json();
             }, function(error) {
-                //error.message //=> String
-                alert(error.message);
+                alert('ERROR: Failed to setup account - please contact support');
         })
         
     }
@@ -67,9 +61,9 @@ class App extends React.Component {
                                             </div>
                                             <div className="col-md-3 column">
                                                 <select name="platform" value={this.state.platform} onChange={this.handleChangePlatform}>
-                                                    <option value="pc">PC</option>
-                                                    <option value="ps4">PS4</option>
-                                                    <option value="xbox">XBOX</option>
+                                                    <option value="1">PC</option>
+                                                    <option value="2">XBOX</option>
+                                                    <option value="3">PS4</option>
                                                 </select>
                                             </div>
                                             <div className="col-md-2 column">
