@@ -221,3 +221,19 @@ textarea {
     color: #FFF;
 }
 .section.hero .search .email { border-left: 1px solid #eee; }
+
+/*** FOOTER ***/
+footer {
+    padding: 15px 0px;
+    font-family: 'Open Sans', sans-serif;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+footer p {
+    margin: 0px;
+    padding: 0px;
+    font-size: 13px;
+    text-align: center;
+}
+footer a { color: #888; text-decoration: underline; }

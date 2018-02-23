@@ -1,20 +1,47 @@
-import React, { Component } from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
 class App extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {value: ''};
+        this.state = {
+            username: '',
+            platform: 'pc',
+            apikey: '41c2a2e1-936f-4a54-85a0-8ebba5f73832'
+        };
 
-        this.handleChange = this.handleChange.bind(this);
+        // HANDLE SUBMIT
         this.handleSubmit = this.handleSubmit.bind(this);
+
+        // HANDLE FIELDS
+        this.handleChangeUsername = this.handleChangeUsername.bind(this);
+        this.handleChangePlatform = this.handleChangePlatform.bind(this);
     }
 
     handleSubmit(event) {
-        alert('Your favorite flavor is: ' + this.state.value);
         event.preventDefault();
+        var url = "http://fortnite.bruindev.com/api/trackUser.php?platform=" + this.state.platform + "&username=" + this.state.username;
+        fetch(url, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            }).then(function(response) {
+                //response.status     //=> number 100–599
+                //response.statusText //=> String
+                //response.headers    //=> Headers
+                //response.url        //=> String
+
+                alert(response.text());
+            }, function(error) {
+                //error.message //=> String
+                alert(error.message);
+        })
+        
     }
+    handleChangeUsername(event) { this.setState({username: event.target.value}); }
+    handleChangePlatform(event) { this.setState({platform: event.target.value}); }
 
     render() {
         return (
@@ -24,7 +51,7 @@ class App extends React.Component {
                         <div className="row">
                             <div className="col-md-12">
                                 <h1>Fortnite Skill Tracker</h1>
-                                <h2></h2>
+                                <h2>Enter your Epic Games username below to start having your KD tracked</h2>
                             </div>
                             <div className="row hide">
                                 <div className="col-md-12">
@@ -36,13 +63,13 @@ class App extends React.Component {
                                     <div className="search">
                                         <div className="row">
                                             <div className="col-md-7 column">
-                                                <input type="text" name="username" value={this.state.value} onChange={this.handleChange} placeholder="Your Epic Games Username..." />
+                                                <input type="text" name="username" placeholder="Your Epic Games Username..." value={this.state.username} onChange={this.handleChangeUsername} />
                                             </div>
                                             <div className="col-md-3 column">
-                                                <select name="platform">
-                                                    <option>PC</option>
-                                                    <option>PS4</option>
-                                                    <option>XBOX</option>
+                                                <select name="platform" value={this.state.platform} onChange={this.handleChangePlatform}>
+                                                    <option value="pc">PC</option>
+                                                    <option value="ps4">PS4</option>
+                                                    <option value="xbox">XBOX</option>
                                                 </select>
                                             </div>
                                             <div className="col-md-2 column">
@@ -60,7 +87,7 @@ class App extends React.Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-md-12">
-                                <p>Website branded & powered by <a href="https://haydenbruin.com">Bruin Development</a></p>
+                                <p>Website branded & powered by <a href="https://haydenbruin.com" target="_blank" rel="noopener noreferrer">Bruin Development</a></p>
                             </div>
                         </div>
                     </div>
