@@ -222,6 +222,57 @@ textarea {
 }
 .section.hero .search .email { border-left: 1px solid #eee; }
 
+/*** PAGE ***/
+.section.page {
+    color: #FFF;
+    background-image: linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,.7) 405px),url(/images/bg.jpg) !important;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 100px 0px 150px 0px;
+    margin: 0px;
+	position: relative;
+    text-align: center;
+    min-height: 100vh;
+}
+.section.page h1 {
+    color: #FFF;
+    font-size: 32px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+.section.page h2 {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 60px;
+}
+.section.page h3 {
+    color: #FFF;
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+.section.page h4 {
+    color: #FFF;
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+.section.page p {
+    color: #FFF;
+    font-size: 45px;
+    font-weight: bold;
+}
+.section.page p.matches {
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: normal;
+}
+.section.page .row.gap {
+    margin-bottom: 50px;
+}
+
 /*** FOOTER ***/
 footer {
     padding: 15px 0px;
