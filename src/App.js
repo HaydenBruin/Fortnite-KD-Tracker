@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Link, BrowserRouter, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import Home from './components/Home.js';
@@ -10,6 +10,13 @@ class App extends React.Component {
         return (
             <BrowserRouter>
                 <div className="App">
+
+                    <header>
+                        <Link to="/">
+                            <img src="/images/logo.png" alt="Fortnite Logo"/>
+                        </Link>
+                    </header>
+
                     <div>
                         <Route exact path="/" component={Home}/>
                         <Route exact path="/user/:username/" component={User}/>
