@@ -18,13 +18,13 @@ class Displaystatistics extends React.Component {
                     <div className="col-md-4">
                         <h4>{this.props.data['duo']['title']}</h4>
                         <p>{this.props.data['duo']['kd']}</p>
-                        <p className={this.props.data['duo']['kd'] === "N/A" ? "hide" : "matches"}>{this.props.data['duo']['kills']} Kills - {this.props.data['solo']['matches']} Matches</p>
+                        <p className={this.props.data['duo']['kd'] === "N/A" ? "hide" : "matches"}>{this.props.data['duo']['kills']} Kills - {this.props.data['duo']['matches']} Matches</p>
                     </div>
                     
                     <div className="col-md-4">
                         <h4>{this.props.data['squad']['title']}</h4>
                         <p>{this.props.data['squad']['kd']}</p>
-                        <p className={this.props.data['squad']['kd'] === "N/A" ? "hide" : "matches"}>{this.props.data['squad']['kills']} Kills - {this.props.data['solo']['matches']} Matches</p>
+                        <p className={this.props.data['squad']['kd'] === "N/A" ? "hide" : "matches"}>{this.props.data['squad']['kills']} Kills - {this.props.data['squad']['matches']} Matches</p>
                     </div>
                 </div>
             );

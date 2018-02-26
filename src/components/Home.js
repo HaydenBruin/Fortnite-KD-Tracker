@@ -39,7 +39,7 @@ class Home extends React.Component {
             .then(data => {
                 if(data['status'] === 1 || data['status'] === 3) // IF the account was created OR IF the account already exists, redirect them as well
                 {
-                    window.location.href = "/user/" + this.state.username + "/";
+                    this.props.history.push("/user/" + this.state.username + "/");
                 }
                 else if(data['status'] === 2) // IF account didn't exist
                 {
