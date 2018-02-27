@@ -27,8 +27,7 @@ class User extends React.Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-md-12">
-                                <h1>Fortnite Skill Tracker</h1>
-                                <h2>Viewing statistics overview for {this.props.match.params.username}</h2>
+                                <h1>Viewing statistics overview for {this.props.match.params.username}</h1>
                                 
                                 <Displaystatistics title="Daily Statistics" data={ this.state.hasLoaded ? this.state.user.playlists.daily : null }  />
                                 <Displaystatistics title="Weekly Statistics" data={ this.state.hasLoaded ? this.state.user.playlists.weekly : null } />

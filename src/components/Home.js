@@ -58,7 +58,7 @@ class Home extends React.Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
-                            <h1>Fortnite Skill Tracker</h1>
+                            <h1>Fortnite KD Tracker</h1>
                             <h2>Enter your Epic Games username below to start having your KD tracked</h2>
                         </div>
                         <div className={ this.state.errorMSG ? 'col-md-12' : 'hide'  }>

@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import Home from './components/Home.js';
 import User from './components/User.js';
+import Api from './components/Api.js';
+import FortniteNews from './components/FortniteNews.js';
 
 class App extends React.Component {
     render() {
@@ -20,13 +22,15 @@ class App extends React.Component {
                     <div>
                         <Route exact path="/" component={Home}/>
                         <Route exact path="/user/:username/" component={User}/>
+                        <Route exact path="/api/" component={Api}/>
+                        <Route exact path="/fortnite-news/" component={FortniteNews}/>
                     </div>
 
                     <footer>
                         <div className="container">
                             <div className="row">
                                 <div className="col-md-12">
-                                    <p>Website branded & powered by <a href="https://haydenbruin.com" target="_blank" rel="noopener noreferrer">Bruin Development</a></p>
+                                    <p>Website branded & powered by <a href="https://haydenbruin.com" target="_blank" rel="noopener noreferrer">Hayden Bruin</a> - <Link to="/api/">API Information</Link> - <Link to="/fortnite-news/">Fortnite News</Link></p>
                                 </div>
                             </div>
                         </div>

@@ -178,7 +178,7 @@ textarea {
 /*** HEADER ***/
 header {
     position: fixed;
-    height: 100px;
+    height: 110px;
     z-index: 10;
     top: 0px;
     left: 0px;
@@ -197,7 +197,7 @@ header img {
 
 /*** HERO ***/
 .section.hero {
-    background-image: linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,.7) 405px),url(/images/bg.jpg) !important;
+    background-image: url(/images/bg-1.jpg) !important;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -209,7 +209,7 @@ header img {
 }
 .section.hero h1 {
     color: #FFF;
-    font-size: 32px;
+    font-size: 46px;
     margin-top: 0px;
     margin-bottom: 15px;
 }
@@ -218,6 +218,7 @@ header img {
     font-size: 20px;
     font-weight: normal;
     margin-bottom: 60px;
+    font-family: 'Open Sans', sans-serif;
 }
 .section.hero .search .row .column { padding: 0px; }
 .section.hero .search.loading input {
@@ -244,11 +245,11 @@ header img {
 /*** PAGE ***/
 .section.page {
     color: #FFF;
-    background-image: linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,.7) 405px),url(/images/bg.jpg) !important;
+    background-image: url(/images/bg-1.jpg) !important;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    padding: 100px 0px 150px 0px;
+    padding: 150px 0px 150px 0px;
     margin: 0px;
 	position: relative;
     text-align: center;
@@ -258,13 +259,12 @@ header img {
     color: #FFF;
     font-size: 32px;
     margin-top: 0px;
-    margin-bottom: 15px;
+    margin-bottom: 60px;
 }
 .section.page h2 {
     color: #FFF;
     font-size: 20px;
     font-weight: normal;
-    margin-bottom: 60px;
 }
 .section.page h3 {
     color: #FFF;
@@ -280,8 +280,11 @@ header img {
 }
 .section.page p {
     color: #FFF;
-    font-size: 45px;
     font-weight: normal;
+}
+.section.page p.large {
+    font-size: 45px;
+    font-family: 'Luckiest Guy', cursive;
 }
 .section.page p.matches {
     font-size: 16px;
@@ -289,6 +292,24 @@ header img {
     font-weight: normal;
 }
 .section.page .row.gap {
+    margin-bottom: 50px;
+}
+.section.page a {
+    color: #FFF;
+    text-decoration: underline;
+}
+.section.page .news img { text-align: center; }
+.section.page .news {
+    text-align: left;
+}
+
+/*** PAGE CONTENT ***/
+.section.page .content {
+    background:  rgba(0,0,0,0.5);
+    padding: 50px 30px;
+    margin-top: 50px;
+}
+.section.page .content h1 {
     margin-bottom: 50px;
 }
 
