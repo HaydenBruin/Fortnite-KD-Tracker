@@ -9,7 +9,7 @@ import DailyKD from './components/DailyKD.js';
 import WeeklyKD from './components/WeeklyKD.js';
 import FortniteNews from './components/FortniteNews.js';
 
-class App extends React.Component {
+class TemplateMain extends React.Component {
     render() {
         return (
             <BrowserRouter>
@@ -46,4 +46,4 @@ class App extends React.Component {
     }
 }
 
-export default App;
+export default TemplateMain;

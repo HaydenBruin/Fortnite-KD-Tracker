@@ -6,7 +6,7 @@ class Home extends React.Component {
         this.state = {
             username: '',
             platform: '1',
-            apiurl: 'http://fortnite.bruindev.com',
+            apiurl: 'https://fortnitekd.club',
             errorMSG: '',
             loading: false,
             platforms: []

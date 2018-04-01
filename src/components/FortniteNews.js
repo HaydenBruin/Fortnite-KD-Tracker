@@ -7,7 +7,7 @@ class FortniteNews extends React.Component {
         this.state = {
             news: [],
             newsLoaded: false,
-            apiurl: 'http://fortnite.bruindev.com'
+            apiurl: 'https://fortnitekd.club'
         };
 
         

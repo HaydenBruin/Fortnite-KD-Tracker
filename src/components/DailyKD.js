@@ -1,7 +1,7 @@
 import React from 'react';
 import Displaystatistics from './DisplayStatistics.js';
 
-class User extends React.Component {
+class DailyKD extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -27,10 +27,7 @@ class User extends React.Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-md-12">
-                                <h1>Viewing statistics overview for {this.props.match.params.username}</h1>
-                                
                                 <Displaystatistics title="Daily Statistics" data={ this.state.hasLoaded ? this.state.user.playlists.daily : null }  />
-                                <Displaystatistics title="Weekly Statistics" data={ this.state.hasLoaded ? this.state.user.playlists.weekly : null } />
                             </div>
                         </div>
                     </div>
@@ -41,4 +38,4 @@ class User extends React.Component {
     }
 }
 
-export default User;
+export default DailyKD;
