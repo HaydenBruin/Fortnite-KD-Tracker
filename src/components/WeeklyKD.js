@@ -23,7 +23,7 @@ class WeeklyKD extends React.Component {
         return (
             <div className="User">
                 
-                <div className="section page">
+                <div className="section page stream-element">
                     <div className="container">
                         <div className="row">
                             <div className="col-md-12">

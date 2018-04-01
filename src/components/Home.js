@@ -1,4 +1,5 @@
 import React from 'react';
+import DefaultLayout from './DefaultLayout.js';
 
 class Home extends React.Component {
     constructor(props) {
@@ -54,42 +55,44 @@ class Home extends React.Component {
 
     render() {
         return (
-            <div className="section hero">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-12">
-                            <h1>Fortnite KD Tracker</h1>
-                            <h2>Enter your Epic Games username below to start having your KD tracked</h2>
-                        </div>
-                        <div className={ this.state.errorMSG ? 'col-md-12' : 'hide'  }>
-                            <div className="alert alert-danger">{this.state.errorMSG}</div>
-                        </div>
-                        <div className="col-md-12">
-                            <form onSubmit={this.handleSubmit}>
-                                <div className={this.state.loading ? "loading search" : "search"}>
-                                    <div className="row">
-                                        <div className="col-md-7 column">
-                                            <input type="text" name="username" placeholder="Your Epic Games Username..." value={this.state.username} onChange={this.handleChangeUsername} />
-                                        </div>
-                                        <div className="col-md-3 column">
-                                            <select name="platform" value={this.state.platform} onChange={this.handleChangePlatform}>
-                                                {
-                                                    this.state.platforms.map(function(platform, index) {
-                                                        return <option value={platform.num} key={index}>{platform.title}</option>
-                                                    })
-                                                }
-                                            </select>
-                                        </div>
-                                        <div className="col-md-2 column">
-                                            <button>Submit</button>
+            <DefaultLayout>
+                <div className="section hero">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-12">
+                                <h1>Fortnite KD Tracker</h1>
+                                <h2>Enter your Epic Games username below to start having your KD tracked</h2>
+                            </div>
+                            <div className={ this.state.errorMSG ? 'col-md-12' : 'hide'  }>
+                                <div className="alert alert-danger">{this.state.errorMSG}</div>
+                            </div>
+                            <div className="col-md-12">
+                                <form onSubmit={this.handleSubmit}>
+                                    <div className={this.state.loading ? "loading search" : "search"}>
+                                        <div className="row">
+                                            <div className="col-md-7 column">
+                                                <input type="text" name="username" placeholder="Your Epic Games Username..." value={this.state.username} onChange={this.handleChangeUsername} />
+                                            </div>
+                                            <div className="col-md-3 column">
+                                                <select name="platform" value={this.state.platform} onChange={this.handleChangePlatform}>
+                                                    {
+                                                        this.state.platforms.map(function(platform, index) {
+                                                            return <option value={platform.num} key={index}>{platform.title}</option>
+                                                        })
+                                                    }
+                                                </select>
+                                            </div>
+                                            <div className="col-md-2 column">
+                                                <button>Submit</button>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </form>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </DefaultLayout>
         );
     }
 }
