@@ -1,12 +1,13 @@
 import React from 'react';
 import Displaystatistics from './DisplayStatistics.js';
+import { APIUrl } from './../helpers.js';
 
 class DailyKD extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            apiurl: 'https://fortnitekd.club',
+            apiurl: APIUrl,
             user: [],
             hasLoaded: false
         };

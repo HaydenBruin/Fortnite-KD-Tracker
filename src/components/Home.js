@@ -1,5 +1,6 @@
 import React from 'react';
 import DefaultLayout from './DefaultLayout.js';
+import { APIUrl } from './../helpers.js';
 
 class Home extends React.Component {
     constructor(props) {
@@ -7,12 +8,12 @@ class Home extends React.Component {
         this.state = {
             username: '',
             platform: '1',
-            apiurl: 'https://fortnitekd.club',
+            apiurl: APIUrl,
             errorMSG: '',
             loading: false,
             platforms: []
         };
-
+        console.log(APIUrl);
         // HANDLE SUBMIT
         this.handleSubmit = this.handleSubmit.bind(this);
 
@@ -20,7 +21,7 @@ class Home extends React.Component {
         this.handleChangeUsername = this.handleChangeUsername.bind(this);
         this.handleChangePlatform = this.handleChangePlatform.bind(this);
     }
-
+    
     componentDidMount() {
         // LOAD PLATFORM DATA
         fetch(this.state.apiurl + "/api/loadPlatforms.php")

@@ -265,6 +265,7 @@ header img {
     color: #FFF;
     font-size: 20px;
     font-weight: normal;
+    margin-bottom: 30px;
 }
 .section.page h3 {
     color: #FFF;
@@ -302,6 +303,29 @@ header img {
 .section.page .news {
     text-align: left;
 }
+
+/*** EMAIL ***/
+.section.page .search .row .column { padding: 0px; }
+.section.page .search.loading input {
+    background: #FFF url(/images/loading.gif) no-repeat;
+    background-position: center right 15px;
+}
+.section.page .search input,
+.section.page .search select,
+.section.page .search button {
+    width: 100%;
+    margin: 0px;
+    height: 60px;
+    border: 0px;
+    padding: 0px 20px;
+}
+.section.page .search select { background: #eee; outline: none; }
+.section.page .search button { background: #6b5acc; padding: 0px; }
+.section.page .search button:hover {
+    background: #6356af;
+    color: #FFF;
+}
+.section.page .search .email { border-left: 1px solid #eee; }
 
 /*** STREAM ELEMENTS ***/
 .section.page.stream-element {

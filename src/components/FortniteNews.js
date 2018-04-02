@@ -1,5 +1,6 @@
 import React from 'react';
 import DefaultLayout from './DefaultLayout.js';
+import { APIUrl } from './../helpers.js';
 
 class FortniteNews extends React.Component {
     constructor(props)
@@ -8,7 +9,7 @@ class FortniteNews extends React.Component {
         this.state = {
             news: [],
             newsLoaded: false,
-            apiurl: 'https://fortnitekd.club'
+            apiurl: APIUrl
         };
 
         
