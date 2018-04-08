@@ -1,7 +1,7 @@
 import React from 'react';
 import DefaultLayout from './DefaultLayout.js';
 
-class Api extends React.Component {
+class Leaderboard extends React.Component {
     render() {
         return (
             <DefaultLayout>
@@ -9,9 +9,8 @@ class Api extends React.Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-md-12 content">
-                                <h1>Site API Information</h1>
-                                <p><a href="https://fortnitetracker.com/site-api" target="_blank"  rel="noopener noreferrer">FortniteTracker.com</a> provides a public API for non-commerical use.</p>
-                                <p>We use their service to track users kills & matches played.</p>
+                                <h1>Your Group Title</h1>
+                                <p>A group of mighty warriors battling to be the best</p>
                             </div>
                         </div>
                     </div>
@@ -21,4 +20,4 @@ class Api extends React.Component {
     }
 }
 
-export default Api;
+export default Leaderboard;

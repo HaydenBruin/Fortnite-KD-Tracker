@@ -1,6 +1,6 @@
 import React from 'react';
 import Displaystatistics from './DisplayStatistics.js';
-import { APIUrl } from './../helpers.js';
+import APIUrl from './../helpers.js';
 
 class WeeklyKD extends React.Component {
     constructor(props) {

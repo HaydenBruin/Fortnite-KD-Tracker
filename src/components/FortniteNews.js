@@ -1,6 +1,6 @@
 import React from 'react';
 import DefaultLayout from './DefaultLayout.js';
-import { APIUrl } from './../helpers.js';
+import APIUrl from './../helpers.js';
 
 class FortniteNews extends React.Component {
     constructor(props)
