@@ -11,6 +11,19 @@ import WeeklyKD from './components/WeeklyKD.js';
 import FortniteNews from './components/FortniteNews.js';
 
 class App extends React.Component {
+    getAPIURL() {
+        var apiurl = "";
+        if(process.env.NODE_ENV === "development")
+        {
+            apiurl = "http://fortnite.bruindev.com";
+        }
+        else
+        {
+            apiurl = "https://fortnitekd.club";
+        }
+        return apiurl;
+    }
+
     render() {
         return (
             <BrowserRouter>

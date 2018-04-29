@@ -1,13 +1,12 @@
 import React from 'react';
 import Displaystatistics from './DisplayStatistics.js';
 import DefaultLayout from './DefaultLayout.js';
-import APIUrl from './../helpers.js';
 
 class User extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            apiurl: APIUrl,
+            apiurl: "http://fortnite.bruindev.com",
             user: [],
             hasLoaded: false,
             email: ""

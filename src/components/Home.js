@@ -1,6 +1,5 @@
 import React from 'react';
 import DefaultLayout from './DefaultLayout.js';
-import {APIUrl} from './../helpers.js';
 
 class Home extends React.Component {
     constructor(props) {
@@ -8,12 +7,12 @@ class Home extends React.Component {
         this.state = {
             username: '',
             platform: '1',
-            apiurl: APIUrl,
+            apiurl: "http://fortnite.bruindev.com",
             errorMSG: '',
             loading: false,
             platforms: []
         };
-        console.log(APIUrl);
+        
         // HANDLE SUBMIT
         this.handleSubmit = this.handleSubmit.bind(this);
 
