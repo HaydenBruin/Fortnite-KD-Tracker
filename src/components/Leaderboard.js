@@ -11,6 +11,27 @@ class Leaderboard extends React.Component {
                             <div className="col-md-12 content">
                                 <h1>Your Group Title</h1>
                                 <p>A group of mighty warriors battling to be the best</p>
+
+                                <table width="100%">
+                                    <thead>
+                                        <th>#</th>
+                                        <th>Player</th>
+                                        <th>Solo K/D</th>
+                                        <th>Duo K/D</th>
+                                        <th>Squad K/D</th>
+                                        <th>Overall K/D</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Mr Haydz</td>
+                                            <td>1.00</td>
+                                            <td>1.00</td>
+                                            <td>1.00</td>
+                                            <td>1.00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>

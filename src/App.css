@@ -197,7 +197,7 @@ header img {
 
 /*** HERO ***/
 .section.hero {
-    background-image: url(/images/bg-1.jpg) !important;
+    background: #FFF; /*-image: url(/images/bg-1.jpg) !important;*/
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -245,7 +245,7 @@ header img {
 /*** PAGE ***/
 .section.page {
     color: #FFF;
-    background-image: url(/images/bg-1.jpg) !important;
+    background: #FFF; /*-image: url(/images/bg-1.jpg) !important;*/
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
