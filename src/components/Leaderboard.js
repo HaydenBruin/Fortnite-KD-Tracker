@@ -14,6 +14,7 @@ class Leaderboard extends React.Component {
             .then((resp) => resp.json())
             .then(data => {
                 this.setState({ leaderboard: data, hasLoaded: true });
+                console.log(data);
             }
         )
     }
@@ -27,8 +28,8 @@ class Leaderboard extends React.Component {
                         <div className="container">
                             <div className="row">
                                 <div className="col-md-12 content">
-                                    <h1>{this.state.leaderboard.leaderboard.title}</h1>
-                                    <p>{this.state.leaderboard.leaderboard.description}</p>
+                                    <h1>{this.state.leaderboard.title}</h1>
+                                    <p>{this.state.leaderboard.description}</p>
 
                                     <table width="100%">
                                         <thead>
@@ -45,7 +46,7 @@ class Leaderboard extends React.Component {
                                             {this.state.leaderboard.players.map((field, i) => {
                                                 return <tr key={i}> 
                                                         <td>{i + 1}</td>
-                                                        <td>Mr Haydz</td>
+                                                        <td>{field['username']}</td>
                                                         <td>{field['solo_kd']}</td>
                                                         <td>{field['duo_kd']}</td>
                                                         <td>{field['squad_kd']}</td>
