@@ -14,7 +14,6 @@ class Leaderboard extends React.Component {
             .then((resp) => resp.json())
             .then(data => {
                 this.setState({ leaderboard: data, hasLoaded: true });
-                console.log(data);
             }
         )
     }
@@ -28,8 +27,8 @@ class Leaderboard extends React.Component {
                         <div className="container">
                             <div className="row">
                                 <div className="col-md-12 content">
-                                    <h1>Your Group Title</h1>
-                                    <p>A group of mighty warriors battling to be the best</p>
+                                    <h1>{this.state.leaderboard.leaderboard.title}</h1>
+                                    <p>{this.state.leaderboard.leaderboard.description}</p>
 
                                     <table width="100%">
                                         <thead>
@@ -45,7 +44,7 @@ class Leaderboard extends React.Component {
                                         <tbody>
                                             {this.state.leaderboard.players.map((field, i) => {
                                                 return <tr key={i}> 
-                                                        <td>{i}</td>
+                                                        <td>{i + 1}</td>
                                                         <td>Mr Haydz</td>
                                                         <td>{field['solo_kd']}</td>
                                                         <td>{field['duo_kd']}</td>
@@ -70,10 +69,7 @@ class Leaderboard extends React.Component {
                         <div className="container">
                             <div className="row">
                                 <div className="col-md-12 content">
-                                    <h1>Your Group Title</h1>
-                                    <p>A group of mighty warriors battling to be the best</p>
-
-                                    <h2>Loading leaderboard....</h2>
+                                    <h1>Loading...</h1>
                                 </div>
                             </div>
                         </div>
