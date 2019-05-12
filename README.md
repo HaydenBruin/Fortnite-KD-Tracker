@@ -1,8 +1,10 @@
+(This project is no longer live)
+
 ## Fortnite KD Tracker
 
 I've built this web app so you can track your progress. It will output your daily KD & your weekly KD.
 
-You can view a live version (and sign up to track yourself) at https://fortnitekd.club
+You can view a live version (and sign up to track yourself) at (no longer online)
 
 ## Plan To Add
 
